@@ -302,9 +302,8 @@ jobs:
           name: Deploy backend
           command: |
             cd backend
-            npm install --legacy-peer-deps
+            npm i
             npm run build
-            rm -rf node_modules
             cd ..
             # Zip Backend Directory
             tar -C backend -czvf artifact.tar.gz .
